@@ -1,0 +1,81 @@
+---
+import { Image } from "astro:assets";
+import heroImage from "../assets/hero-image.png";
+---
+
+<section class="bg-white">
+  <div class="mx-auto relative z-10 max-w-7xl pb-24 px-6 sm:pb-32 lg:px-8 lg:flex lg:items-center lg:gap-x-20">
+
+    <!-- Background pattern -->
+    <div class="absolute inset-0 bg-[radial-gradient(#0000001c_1px,transparent_1px)] bg-size-[20px_20px] mask-[radial-gradient(ellipse_50%_50%_at_50%_50%,#000_80%,transparent_100%)]"></div>
+
+    <!-- Text column -->
+    <div class="relative mx-auto max-w-xl lg:mx-0 lg:flex-auto">
+      <h1
+        data-aos="fade-up"
+        data-aos-delay="100"
+        class="text-4xl font-semibold tracking-tight text-pretty text-cyan-900 sm:text-5xl text-center lg:text-left"
+      >
+        Bereit mehr Umsatz aus Ihrem Traffic zu holen?
+      </h1>
+
+      <p
+        data-aos="fade-up"
+        data-aos-delay="200"
+        class="mt-8 text-lg font-medium text-pretty sm:text-xl/8 text-center lg:text-left text-gray-700"
+      >
+        Vereinbaren Sie jetzt ein Beratungsgespräch.
+      </p>
+
+      <div
+        data-aos="fade-up"
+        data-aos-delay="300"
+        class="mt-8 flex justify-center lg:justify-start gap-x-6"
+      >
+        <a
+          href="#"
+          class="inline-flex items-center gap-x-2 rounded-full bg-amber-400 px-6 py-2.5 font-semibold text-sky-950 hover:bg-orange-400 transition-all group"
+        >
+          Gespräch vereinbaren
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-5">
+            <path class="transition group-hover:translate-x-1.5" stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+            <path class="opacity-0 transition group-hover:opacity-100" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Image column -->
+    <div data-aos="fade-up" class="max-w-140 mt-16 mx-auto sm:mt-24 lg:mt-0 lg:shrink-0 lg:grow">
+      <div class="group relative aspect-square overflow-hidden rounded-4xl">
+
+        <!-- Border frame -->
+        <div class="absolute top-0 right-4 bottom-6 left-0 rounded-4xl border border-cyan-500 transition duration-300 group-hover:scale-95 xl:right-6"></div>
+
+        <!-- CLIPPED IMAGE (Speakers-style) -->
+        <div
+          class="absolute inset-0 bg-linear-to-tl from-cyan-500 to-cyan-950 to-60%"
+          style="clip-path: url(#hero-clip-0);"
+        >
+          <Image
+            src={heroImage}
+            alt=""
+            class="absolute inset-0 h-full w-full object-cover object-top transition group-hover:scale-110"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Inline SVG clipPath (Speakers pattern) -->
+  <svg width="0" height="0" aria-hidden="true">
+    <defs>
+      <clipPath id="hero-clip-0" clipPathUnits="objectBoundingBox">
+        <path d="M0,0 h0.729 v0.129 h0.121 l-0.016,0.032 C0.815,0.198,0.843,0.243,0.885,0.243 H1 v0.757 H0.271 v-0.086 l-0.121,0.057 v-0.214 c0,-0.032,-0.026,-0.057,-0.057,-0.057 H0 V0" />
+      </clipPath>
+    </defs>
+  </svg>
+</section>

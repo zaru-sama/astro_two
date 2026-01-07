@@ -1,0 +1,73 @@
+---
+import { Image } from "astro:assets";
+
+import heroImage from "../assets/hero-image.png";
+import heroBg from "../assets/check.webp";
+---
+
+<section class="relative bg-linear-to-tl from-cyan-500 to-cyan-950 overflow-hidden">
+    <div class="mx-auto z-10 relative max-w-7xl px-6 lg:px-8 pt-24 sm:pt-32 lg:flex lg:items-center lg:gap-x-10">
+      <div class="mx-auto max-w-xl lg:mx-0 lg:flex-auto">
+
+        <div data-aos="fade-up" class="mb-8 flex justify-center lg:justify-start">
+          <div class="relative rounded-full px-3 py-0.5 text-sm/6 text-sky-400 bg-white/10 ring-1 ring-white/20 ">
+            Holen Sie mehr raus!
+          </div>
+        </div>
+
+        <h1 data-aos="fade-up" data-aos-delay="100" class="text-4xl font-extrabold tracking-wide text-pretty text-white uppercase sm:text-7xl text-center lg:text-left">
+          Checkout mit
+        </h1>
+          <h1 data-aos="fade-up" data-aos-delay="100" class="text-4xl font-extrabold tracking-wide text-pretty text-amber-400 uppercase sm:text-7xl text-center lg:text-left">
+            Checkido
+          </h1>
+
+          <p data-aos="fade-up" data-aos-delay="200" class="text-lg mt-8 font-medium text-pretty sm:text-xl/8 text-center lg:text-left">
+            <span class="flex-wrap text-sky-400 justify-center lg:justify-start gap-x-2 gap-y-1 hidden">
+              Holen Sie mehr raus!
+            </span>
+            <span class="flex text-white  flex-wrap justify-center lg:justify-start gap-x-2 gap-y-1">
+              Steigern Sie Ihre Erlöse, auch nach dem Kaufabschluss.
+            </span>
+          </p>
+
+          <div data-aos="fade-up" data-aos-delay="300" class="mt-8 flex justify-center lg:justify-start gap-x-6">
+
+            <a href="#" type="button" class="inline-flex items-center gap-x-2 rounded-full bg-amber-400 px-6 py-2.5 font-semibold text-sky-950 hover:bg-orange-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-400 transition-all group"
+            >
+              <span class="flex items-center">Gespräch vereinbaren</span>
+     
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-5">
+                <path class="transition group-hover:translate-x-1.5" stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                <path class="opacity-0 transition group-hover:opacity-100" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" />
+              </svg>
+            </a>
+
+          </div>
+      </div>
+      <div class="max-w-150 mt-16 mx-auto sm:mt-24 lg:mt-0 lg:shrink-0 lg:grow">
+        <Image
+          src={heroImage}
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          alt="woman with a tablet"
+          class="relative mx-auto w-140 max-w-full"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+        />
+      </div>
+    </div>
+    <Image
+    src={heroBg}
+    alt=""
+    aria-hidden="true"
+    data-aos="zoom-in"
+    data-aos-duration="2000"
+    data-aos-delay="500"
+    class="lg:opacity-90 blur-md lg:blur-2xl animate-pulse [animation-duration:6s] pointer-events-none select-none absolute top-1/2 left-1/2 -translate-x-[42%] translate-y-[0%] lg:-translate-x-25 lg:-translate-y-1/2 w-200 max-w-200 sm:w-300 sm:max-w-300 lg:w-full lg:max-w-[70%] h-fullz-0"
+    loading="eager"
+    decoding="async"
+    fetchpriority="high"
+  />
+</section>
